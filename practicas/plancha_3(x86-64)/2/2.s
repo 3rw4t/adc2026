@@ -7,5 +7,4 @@ main:
     addb %bl, %al
     incb %bl
 
-
     ret
