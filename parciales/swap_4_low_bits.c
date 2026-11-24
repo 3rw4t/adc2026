@@ -2,7 +2,7 @@
 
 
 int main(){
-    // se quieren imprimir los 4 bits inferiores de x
+    // se quieren swapear los 4 bits inferiores de x
 
     unsigned char x = 0b10110110;
     
