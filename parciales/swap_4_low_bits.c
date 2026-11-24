@@ -14,10 +14,10 @@ int main(){
 
     printf("mascara = %08b\n", mascara);
 
-    // modificamos a x para que sea igual al resultado de hacer x & mascara (bit a bit) y luego imprimimos el resultado
-
+    // modificamos a ~x para que sea igual al resultado de hacer x & mascara (bit a bit) y luego imprimimos el resultado
+    
+    x = ~x;
     x = x & mascara;
-
     printf("x & mascara = %08b\n", x);
 
 
