@@ -2,14 +2,21 @@
 #include <math.h>
 #include <ieee754.h>
 
+union myUnion{
+    union ieee754_float ie;
+    unsigned int bits;
+}; 
+
 int main(){
-    union ieee754_float myfloat;
-    myfloat.f = INFINITY;
+    union myUnion myfloat;
+    myfloat.ie.f = 0.2f;
     printf("Float infinity\n");
-    printf("Signo: %x\n", myfloat.ieee.negative);
-    printf("Exponente: %x\n", myfloat.ieee.exponent);
-    printf("Mantisa %x\n", myfloat.ieee.mantissa);
+    printf("Signo: %x\n", myfloat.ie.ieee.negative);
+    printf("Exponente: %x\n", myfloat.ie.ieee.exponent);
+    printf("Mantisa %x\n", myfloat.ie.ieee.mantissa);
     
+    printf("Numero entero %x\n", myfloat.bits);
+
     union ieee754_double mydouble;
     mydouble.d = NAN;
     printf("Double NaN\n");
