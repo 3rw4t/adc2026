@@ -16,10 +16,13 @@ int main(){
 
     // modificamos a ~x para que sea igual al resultado de hacer x & mascara (bit a bit) y luego imprimimos el resultado
     
-    x = ~x;
-    x = x & mascara;
-    printf("x & mascara = %08b\n", x);
+    printf("~x & mascara = %08b\n", ~x & mascara);
 
+    printf("x & ~mascara: %08b\n", x & ~mascara);
+
+    // swapeamos los 4 bits inferiores con la suma de los 2 resultados anteriores
+
+    printf("swap 4 bits: (~x & mascara) + (x & ~mascara): %08b\n", (~x & mascara) + (x & ~mascara));
 
     return 0;
 }
