@@ -9,7 +9,7 @@ union myUnion{
 
 int main(){
     union myUnion myfloat;
-    myfloat.ie.f = 0.2f;
+    myfloat.ie.f = 15.75;
     printf("Float infinity\n");
     printf("Signo: %x\n", myfloat.ie.ieee.negative);
     printf("Exponente: %x\n", myfloat.ie.ieee.exponent);
